@@ -31,26 +31,87 @@
 
 /* -------------------- Typographie --------------------*/
 
+h1 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+}
 
-
+p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
 
 
 /* -------------------- Body & Main --------------------*/
 
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 main {
     width: 80%;
-    max-width: 30rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1, 1);
+    gap: 2rem;
+    grid-template-areas:
+        "bloc1 bloc1 bloc4"
+        "bloc2 bloc3 bloc4"
+        "bloc5 bloc6 bloc7";
 }
 
+#bloc1 {grid-area: bloc1;}
+#bloc2 {grid-area: bloc2;}
+#bloc3 {grid-area: bloc3;}
+#bloc4 {grid-area: bloc4;}
+#bloc5 {grid-area: bloc5;}
+#bloc6 {grid-area: bloc6;}
+#bloc7 {grid-area: bloc7;}
+
+
 /* -------------------- Btn --------------------*/
+
+button {
+    background-color: var(--red500);
+    padding: 0.8rem 2rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 2rem;
+
+}
+
+/* -------------------- Navigation --------------------*/
+
+
+/* -------------------- Blocs --------------------*/
+
+#bloc1 img {
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card img {
+    width: 50%;
+    height: 50%;
+}
+
+.card-text {
+    padding-left: 0.5rem;
+}
+
+.card-text p:first-of-type {
+    color: var(--red500);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
 
