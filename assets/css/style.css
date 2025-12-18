@@ -34,11 +34,13 @@
 h1 {
     font-size: 3rem;
     line-height: 3.2rem;
+    font-weight: 600;
 }
 
-p {
-    font-size: 0.8rem;
+p, li {
+    font-size: 0.7rem;
     line-height: 1.5rem;
+    color: var(--navy600);
 }
 
 
@@ -52,6 +54,7 @@ body {
 
 main {
     width: 80%;
+    max-width: 60rem;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -76,16 +79,62 @@ main {
 
 button {
     background-color: var(--red500);
-    padding: 0.8rem 2rem;
+    padding: 0.7rem 2rem;
     border: none;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 500;
+    letter-spacing: 0.2rem;
+    
     text-transform: uppercase;
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+button:hover,
+button:focus-visible {
+    background-color: var(--black);
+    color: var(--white);
+    outline:none;               
+}
+
+
+/* -------------------- Navigation --------------------*/
+
+header {
+    width: 80%;
+    max-width: 60rem;
+    margin: 2.5rem auto;
+    display: flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+header img {
+    height: 2rem;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+header li a {
+    text-decoration: none;
+    color: var(--navy600);
 
 }
 
-/* -------------------- Navigation --------------------*/
+header li a:hover,
+header li a:focus-visible{
+    color: var(--red500);
+    cursor: pointer;
+    outline: none;
+}
 
 
 /* -------------------- Blocs --------------------*/
@@ -94,15 +143,55 @@ button {
     width: 100%;
 }
 
-.card {
-    display: flex;
-    flex-direction: row;
+/* Bloc 4 */
+#bloc4 {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1rem;
+}
+
+#bloc4 p:first-child {
+    color: var(--gold400);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0.5rem 0 1rem 0;
+}
+
+#bloc4 a {
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#bloc4 a:hover,
+#bloc4 a:focus-visible {
+    color: var(--gold400);  
+    outline: none;
+}
+
+#bloc4 p:nth-of-type(1n + 2) {
+    margin-top: 0.3rem;
+    color: var(--grey300);
+}
+
+hr {
+    border: none;
+    border-top: 0.5px solid var(--grey300);
+    margin: 1rem 0;
 
 }
 
+
+/* Blocs 5, 6 et 7 */
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
 .card img {
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: auto;
 }
 
 .card-text {
@@ -111,7 +200,24 @@ button {
 
 .card-text p:first-of-type {
     color: var(--red500);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
+.card-text a {
+    font-weight: 700;
+    color: var(--black);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.card-text a:hover,
+.card-text a:focus-visible {
+    color: var(--red500);
+    cursor: pointer;
+    outline: none;
+}
+.card-text p:nth-of-type(2) {
+    margin-top: 0.5rem;
+}
