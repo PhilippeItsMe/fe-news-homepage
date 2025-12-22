@@ -58,7 +58,7 @@ main {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1, 1);
+    grid-template-rows: 2fr, 1fr, 1fr;
     gap: 2rem;
     grid-template-areas:
         "bloc1 bloc1 bloc4"
@@ -77,7 +77,7 @@ main {
 
 /* -------------------- Btn --------------------*/
 
-button {
+#bloc3 button {
     background-color: var(--red500);
     padding: 0.7rem 2rem;
     border: none;
@@ -89,11 +89,24 @@ button {
     margin-top: 1rem;
 }
 
-button:hover,
-button:focus-visible {
+#bloc3 button:hover,
+ #bloc3 button:focus-visible {
     background-color: var(--black);
     color: var(--white);
     outline:none;               
+}
+
+#mobile-menu-open button,
+#mobile-menu-closed button {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+#mobile-menu-open button:focus-visible,
+#mobile-menu-closed button:focus-visible {
+    outline: 2px solid var(--gold400);
+    outline-offset: 2px;                           ;
 }
 
 
@@ -112,29 +125,73 @@ header img {
     height: 2rem;
 }
 
-header ul {
+#desktop-menu ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-header li {
+#desktop-menu li {
     display: inline-block;
     margin-left: 3rem;
 }
 
-header li a {
+#mobile-menu-open {
+    background-color: var(--white);
+    width: 8rem;
+    padding: 1rem;
+    position: absolute;
+    top: 4%;
+    right: 2rem;
+
+}
+
+#mobile-menu-open img {
+    width: 2rem;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 1rem;
+}
+
+#mobile-menu-open  li {
+    list-style: none;
+}
+
+#desktop-menu li a,
+#mobile-menu-open li a {
     text-decoration: none;
     color: var(--navy600);
 
 }
 
-header li a:hover,
-header li a:focus-visible{
+#desktop-menu li a:hover,
+#desktop-menu li a:focus-visible,
+#mobile-menu-open li a:hover,
+#mobile-menu-open li a:focus-visible {
     color: var(--red500);
     cursor: pointer;
     outline: none;
 }
+
+#mobile-menu-closed {
+    display: none;
+}
+
+#mobile-menu-open {
+    display: none;
+}
+
+#mobile-menu-closed img {
+        width: 3rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+
+#mobile-menu-open img {
+        cursor: pointer;
+    }
+
 
 
 /* -------------------- Blocs --------------------*/
@@ -220,4 +277,44 @@ hr {
 }
 .card-text p:nth-of-type(2) {
     margin-top: 0.5rem;
+}
+
+/* -------------------- Responsivness --------------------*/
+
+@media screen and (max-width: 800px) {
+    
+     #desktop-menu {
+        display: none;
+    }
+
+    #mobile-menu-closed {
+        display: initial;
+    }
+
+    #mobile-menu-open {
+        display: none;
+    }
+
+    header {
+        width: 90%;
+    }                       
+
+    main {
+        width: 90%;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "bloc1 bloc1"
+            "bloc2 bloc3"
+            "bloc4 bloc4"
+            "bloc5 bloc5"
+            "bloc6 bloc6" 
+            "bloc7 bloc7";
+    }
+
+    .card img {
+        width: 20%;
+        height: auto;
+    }
+
 }

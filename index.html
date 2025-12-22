@@ -17,18 +17,40 @@
     <header>
         <img src="assets/images/logo.svg" alt="logo">
         <nav>
-            <ul>
-                <li><a href="#" aria-label="homepage link">Home</a></li>
-                <li><a href="#" aria-label="new page link">New</a></li>
-                <li><a href="#" aria-label="popular page link">Popular</a></li>
-                <li><a href="#" aria-label="trending page link">Trending</a></li>
-                <li><a href="#" aria-label="category page link">Category</a></li>
-            </ul>
+            <div id="desktop-menu" aria-hidden="false">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Category</a></li>
+                </ul>
+            </div>
+            <div id="mobile-menu-closed">
+                <button aria-label="Open menu" aria-hidden="true">
+                    <img src="assets/images/icon-menu.svg" alt="">
+                </button>
+            </div>
+            <div id="mobile-menu-open">
+                <button aria-label="Close menu" aria-hidden="true" aria-expanded="true">
+                    <img src="assets/images/icon-menu-close.svg" alt="">
+                </button>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Category</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
         <div id="bloc1">
-            <img src="assets/images/image-web-3-desktop.jpg" alt="illustration">
+            <picture>
+                <source media="(min-width: 500px)" srcset="assets/images/image-web-3-desktop.jpg">
+                <img src="assets/images/image-web-3-mobile.jpg" alt="illustration">
+            </picture>
         </div>
         <div id="bloc2">
             <h1>The Bright Future of Web 3.0 ?</h1>
@@ -41,13 +63,13 @@
         </div>
         <div id="bloc4">
             <p>New</p>
-            <a href="#" aria-label="Hydrogen VS Electric Cars article link">Hydrogen VS Electric Cars</a>
+            <a href="#">Hydrogen VS Electric Cars</a>
             <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
             <hr>
-            <a href="#" aria-label="The Downsides of AI Artistry article link">The Downsides of AI Artistry</a>
+            <a href="#">The Downsides of AI Artistry</a>
             <p>What are the possible adverse effects of on-demand AI image generation?</p>
             <hr>
-            <a href="#" aria-label="Is VC Funding Drying Up article link">Is VC Funding Drying Up?</a>
+            <a href="#">Is VC Funding Drying Up?</a>
             <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </div>
 
@@ -55,7 +77,7 @@
             <img src="assets/images/image-retro-pcs.jpg" alt="retro pc">
             <div class="card-text">
                 <p>01</p>
-                <a href="#" aria-label="Reviving Retro PCs article link">Reviving Retro PCs</a>
+                <a href="#">Reviving Retro PCs</a>
                 <p>What happens when old PCs are given modern upgrades?</p>
            </div>
         </div>
@@ -63,7 +85,7 @@
             <img src="assets/images/image-top-laptops.jpg" alt="top laptops">
             <div class="card-text">
                 <p>02</p>
-                <a href="#" aria-label="Top 10 Laptops of 2022 article link">Top 10 Laptops of 2022</a>
+                <a href="#">Top 10 Laptops of 2022</a>
                 <p>Our best picks for various needs and budgets.</p>
            </div>
         </div>
@@ -71,7 +93,7 @@
             <img src="assets/images/image-gaming-growth.jpg" alt="gaming growth">
             <div class="card-text">
                 <p>03</p>
-                <a href="#" aria-label="The Growth of Gamin article link">The Growth of Gaming</a>
+                <a href="#">The Growth of Gaming</a>
                 <p>How the pandemic has sparked fresh opportunities.</p>
            </div>
         </div>
