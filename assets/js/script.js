@@ -1,7 +1,8 @@
 const desktopMenu = document.querySelector('#desktop-menu');
 
 const mobileMenuClosed = document.querySelector('#mobile-menu-closed');
-const mobileMenuClosedBtn = document.querySelector('#mobile-menu-closed button');
+const mobileMenuClosedBtn = document.querySelector(
+    '#mobile-menu-closed button');
 
 const mobileMenuOpen = document.querySelector('#mobile-menu-open');
 const mobileMenuOpenBtn = document.querySelector('#mobile-menu-open button');
