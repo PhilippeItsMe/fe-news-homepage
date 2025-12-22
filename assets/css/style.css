@@ -58,7 +58,7 @@ main {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2fr, 1fr, 1fr;
+    grid-template-rows: (3, 1fr);
     gap: 2rem;
     grid-template-areas:
         "bloc1 bloc1 bloc4"
@@ -143,7 +143,6 @@ header img {
     position: absolute;
     top: 4%;
     right: 2rem;
-
 }
 
 #mobile-menu-open img {
@@ -316,5 +315,4 @@ hr {
         width: 20%;
         height: auto;
     }
-
 }
